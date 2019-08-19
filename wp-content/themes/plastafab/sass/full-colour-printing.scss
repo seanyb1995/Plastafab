@@ -1,0 +1,217 @@
+//------------------------------------------------------full colour printing--//
+.full-colour-printing-grid {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr;
+  grid-template-rows: 150px auto auto 50px 150px;
+  .full-colour-printing-heading {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    height: 150px;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      h3:first-child {
+        color: $brown;
+        font-size: 3em;
+        margin: 0em 2em;
+      }
+      h3:nth-child(2) {
+        color: $red;
+        font-size: 2em;
+        margin: 0em 17em;
+      }
+  }
+  .full-colour-printing-heading.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px); 
+  }
+  .box-left {
+    grid-column: 1 / span 4;
+    grid-row: 4 / span 3;
+    z-index: 1;
+    background-color: $brown;
+    height: 550px;
+    padding: 5em 8em 4em 8em;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 0px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      font-size: 2em;
+      padding-right: 0.25em;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+    h3:first-child {
+        color: white;
+    }
+    h3:nth-child(2) {
+        color: $red;
+    }
+    p {
+      color: white;
+      padding-right: 16em;
+    }
+    button {
+      font-size: 1em;
+      position: relative;
+      padding: 0.75em 1.5em;
+      float: right;
+      margin: 3em 1em;
+      color: white;
+      border: solid 2px $red;
+      outline: 0;
+      overflow:hidden;
+      background: $brown;
+      z-index: 1;
+      cursor: pointer;
+      transition:         0.3s ease-in;
+      -o-transition:      0.3s ease-in;
+      -ms-transition:     0.3s ease-in;
+      -moz-transition:    0.3s ease-in;
+      -webkit-transition: 0.3s ease-in;
+      font-size: 1em;
+      font-weight: 700;
+    }
+    .fill:hover {
+      color: white;
+    }
+    .fill:before {
+      content: "";
+      position: absolute;
+      background: $red;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 100%;
+      z-index: -1;
+      -webkit-transition: top 0.1s ease-in;
+    }
+    .fill:hover:before {
+      top: 0;
+    }
+    ul {
+      li {
+        color: white;
+        padding: 1em;
+        padding-right: 15em;
+      }
+    }
+  }
+  .box-left.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px); 
+  }
+  .box-right {
+    grid-column: 4 / span 3;
+    grid-row: 6 / span 3;
+    height: 700px;
+    z-index: 2;
+    background-color: $red;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -o-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate3d(1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .box-right.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+  .full-colour-printing-information-right {
+    grid-column: 4 / span 3;
+    grid-row: 11 / span 1;
+    z-index: 1;
+    background: $brown;
+    padding: 0 5em 5em 5em;
+    h3,p {
+        color: white;
+    }
+    h3 {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+    p {
+        padding-bottom: 2em;
+    }
+  }
+  .full-colour-printing-information-left {
+    grid-column: 1 / span 3;
+    grid-row: 11 / span 1;
+    z-index: 1;
+    background: $brown;
+    padding: 0 5em 5em 5em;
+    h3,p {
+        color: white;
+    }
+    h3 {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+    p {
+        padding-bottom: 2em;
+    }
+  }
+  .full-colour-printing-information-heading {
+    grid-column: 1 / span 6;
+    grid-row: 10 / span 1;
+    z-index: 1;
+    background: $brown;
+    padding: 5em 5em 0 5em;
+    h3 {
+        font-size: 2em;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+    h3:first-child {
+        color: white;
+        padding-right: 0.25em;
+    }
+    h3:nth-child(2) {
+        color: $red;
+    }
+  }
+}

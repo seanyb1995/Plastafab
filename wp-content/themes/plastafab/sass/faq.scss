@@ -1,0 +1,91 @@
+//-----------------------------------------------------------------------faq--//
+.faq-grid {
+    display: grid;
+    grid-template-columns: 2fr 4fr 4fr 4fr 4fr 4fr 4fr 2fr;
+    grid-template-rows: 200px auto 100px auto auto;
+    z-index: 1;
+    .faq-heading {
+        grid-column: 1 / span 8;
+        grid-row: 2 / span 1;
+        z-index: 1;
+        text-align: center;
+        opacity: 0;
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
+        -moz-transform: translate3d(0px, 200px, 0px);
+        -webkit-transform: translate3d(0px, 200px, 0px);
+        -o-transform: translate(0px, 200px);
+        -ms-transform: translate(0px, 200px);
+        transform: translate3d(0px, 200px, 0px);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        h3:first-child {
+            color: $brown;
+            font-size: 3em;
+        }
+    }
+    .faq-heading.in-view {
+        opacity: 1;
+        -moz-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translate3d(0px, 0px, 0px);
+        -o-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate3d(0px, 0px, 0px);   
+    }
+    .faq-questions {
+        grid-column: 2 / span 6;
+        grid-row: 3 / span 2;
+        z-index: 1;
+        opacity: 0;
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
+        -moz-transform: translate3d(0px, 200px, 0px);
+        -webkit-transform: translate3d(0px, 200px, 0px);
+        -o-transform: translate(0px, 200px);
+        -ms-transform: translate(0px, 200px);
+        transform: translate3d(0px, 200px, 0px);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: relative;
+        h3,p {
+            margin: 0;
+            padding: 0;
+        }
+        h3 {
+            background: $l-grey;
+            font-size: 1.5em;
+            padding: 12px 24px;
+            border-left: 0.2em solid $red;
+            margin-top: 2em;
+        }
+        h3:before {
+            content: "Q.";
+            
+        }
+        p {
+            font-size: 1em;
+            padding: 12px 24px;
+            color: grey;
+            border-left: 0.2em solid lighten($red, 40%);
+        }
+        p:before {
+            content: "A.";
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    }
+    .faq-questions.in-view {
+        opacity: 1;
+        -moz-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translate3d(0px, 0px, 0px);
+        -o-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate3d(0px, 0px, 0px); 
+    }
+}

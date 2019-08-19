@@ -1,0 +1,157 @@
+//---------------------------------------------------------navigation styles--//
+//-----------------------------------------------------------main navigation--//
+header {
+  background-color: $brown;
+  > .inner {
+    max-width: 70%;
+    margin: 0 auto;
+    position: relative;
+    nav {
+      text-align: right;
+      ul, li {
+        padding: 0px;
+        margin: 0px;
+      }
+      li {
+        display: inline-block;
+        a {
+          padding: 1.5em;
+          display: block;
+          text-decoration: none;
+          color: white;
+          position: relative;
+          font-weight: bold;
+          transition: all 0.3s ease;
+        }
+        a:hover {
+          color: $red;
+        }
+        a:after {
+          content: '';
+          width: 0%;
+          transition: all 0.3s ease;
+          left: 50%;
+        }
+        a:before {
+          content: '';
+          width: 0%;
+          transition: all 0.3s ease;
+          left: 50%;
+        }
+        a:hover:after {
+          content: '';
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          background: $red;
+          height: 3px;
+          width: 50%;
+        }
+        a:hover:before {
+          content: '';
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          background: $red;
+          height: 3px;
+          width: 50%;
+        }
+      }
+//------------------------------------------------------------contact button--//
+      button {
+        position: absolute;
+        top: 12px;
+        padding: 0.75em 1.5em;
+        margin: 0 1em;
+        color: $brown;
+        border: none;
+        outline: 0;
+        overflow:hidden;
+        background: #f2f2f2;
+        z-index: 1;
+        cursor: pointer;
+        transition:         0.3s ease-in;
+        -o-transition:      0.3s ease-in;
+        -ms-transition:     0.3s ease-in;
+        -moz-transition:    0.3s ease-in;
+        -webkit-transition: 0.3s ease-in;
+        font-family: helvetica;
+        font-weight: bold;
+        font-size: 1em;
+      }
+      .fill:hover {
+        color: white;
+      }
+      .fill:before {
+        content: "";
+        position: absolute;
+        background: $red;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: -1;
+        -webkit-transition: top 0.1s ease-in;
+      }
+
+      .fill:hover:before {
+        top: 0;
+      }
+    }
+  }
+//------------------------------------------------------------sub navigation--//
+  .sub-menu {
+    z-index: 3;
+    position: absolute;
+    text-align: left;
+    background: #f2f2f2;
+    transition: all 0.3s ease;
+    li {
+      display: block !important;
+      a {
+        color: $brown !important;
+      }
+      a:hover {
+        color: $red !important;
+      }
+    }
+  }
+}
+//-----------------------------------------------------------hamburger menu --//
+.icon {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  color: white;
+  padding: 1.5em;
+  text-decoration: none;
+}
+//-------------------------------------------------------tablet optimisation--//
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 720px) and (max-width: 1024px) {
+//-----------------------------------------------------hamburger menu tablet--//
+  header {
+    .inner {
+      max-width: 100%;
+      nav {
+        text-align: left;
+        button {
+          right: 0;
+        }
+        ul {
+          li {
+            .sub-menu {
+              li {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

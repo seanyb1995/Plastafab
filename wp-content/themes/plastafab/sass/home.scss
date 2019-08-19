@@ -1,0 +1,1440 @@
+//----------------------------------------------------------home page styles--//
+.home-grid {
+    display: grid;
+    grid-template-columns: 3fr 5fr 5fr 5fr 5fr 3fr;
+    grid-template-rows: 150px auto 100px auto 150px;
+    background: white;
+    .background {
+        grid-column: 1 / span 6;
+        grid-row: 1 / span 3;
+        background: white;
+        height: 100vh;
+        z-index: 1;
+    }
+//---------------------------------------------------------home banner title--//
+    .title {
+        grid-column: 2 / span 4;
+        grid-row: 2 / span 2;
+        z-index: 2;
+        h3 {
+            color: $red;
+            font-size: 4em;
+            font-weight: 700;
+            margin: 0;
+        }
+        h3:first-child {
+            margin-top: 200px;
+            -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        h3:nth-child(2) {
+            -webkit-animation: slide-in-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        h3:nth-child(3) {
+            -webkit-animation: slide-in-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        h3:nth-child(4) {
+            -webkit-animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        p {
+            font-size: 1em;
+            color: grey;
+            margin-top: 3em;
+            -webkit-animation: slide-in-bottom 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+//------------------------------------------------------view products button--//
+        button {
+            position: relative;
+            padding: 0.75em 1.5em;
+            margin: 2em 0;
+            color: $brown;
+            border: none;
+            outline: 0;
+            overflow:hidden;
+            background: white;
+            z-index: 1;
+            cursor: pointer;
+            transition:         0.3s ease-in;
+            -o-transition:      0.3s ease-in;
+            -ms-transition:     0.3s ease-in;
+            -moz-transition:    0.3s ease-in;
+            -webkit-transition: 0.3s ease-in;
+            font-weight: 700;
+            font-size: 1em;
+        }
+        .fill:hover {
+            color: white;
+        }
+        .fill:before {
+            content: "";
+            position: absolute;
+            background: $red;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 100%;
+            z-index: -1;
+            -webkit-transition: top 0.1s ease-in;
+        }
+        .fill:hover:before {
+            top: 0;
+        }
+    }
+    .box-upper {
+        grid-column: 4 / span 2;
+        grid-row: 2 / span 3;
+        background: $brown;
+        z-index: 1;
+    }
+    .box-lower {
+        grid-column: 4 / span 2;
+        grid-row: 4 / span 1;
+        height: 150px;
+        background: $red;
+        z-index: 1;
+    }
+}
+//--------------------------------------------------------what we do section--//
+.wwd-grid {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4.1fr;
+  grid-template-rows: 150px 150px 100px 100px auto;
+  background: white; 
+    .wwd-heading {
+      grid-column: 1 / span 6;
+      grid-row: 2 / span 1;
+      height: 150px;
+      opacity: 0;
+      -moz-transition: all 700ms ease-out;
+      -webkit-transition: all 700ms ease-out;
+      -o-transition: all 700ms ease-out;
+      transition: all 700ms ease-out;
+      -moz-transform: translate3d(0px, 200px, 0px);
+      -webkit-transform: translate3d(0px, 200px, 0px);
+      -o-transform: translate(0px, 200px);
+      -ms-transform: translate(0px, 200px);
+      transform: translate3d(0px, 200px, 0px);
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      h3:first-child {
+        color: $brown;
+        font-size: 3em;
+        margin: 0em 2em;
+      }
+      h3:nth-child(2) {
+        color: $red;
+        font-size: 2em;
+        margin: 0em 8em;
+      }
+    }
+    .wwd-heading.in-view {
+        opacity: 1;
+        -moz-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translate3d(0px, 0px, 0px);
+        -o-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate3d(0px, 0px, 0px);
+    }
+//-------------------------------------service vinyl, polyproplene, casemade--//
+      .service-spp {
+        background-color: $brown;
+        grid-column: 1 / span 2;
+        grid-row: 4 / span 3;
+        height: 300px;
+        z-index: 1;
+        padding: 10em 4em 8em 4em;
+        opacity: 0;
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
+        -moz-transform: translate3d(0px, 200px, 0px);
+        -webkit-transform: translate3d(0px, 200px, 0px);
+        -o-transform: translate(0px, 200px);
+        -ms-transform: translate(0px, 200px);
+        transform: translate3d(0px, 200px, 0px);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        h3:first-child {
+          color: $red;
+          font-size: 2em;
+          text-transform: uppercase;
+        } 
+        p {
+            color: white;
+            font-size: 20px;
+        }
+        button {
+          font-size: 1em;
+          position: relative;
+          padding: 0.75em 1.5em;
+          float: right;
+          margin: 3em 0;
+          color: $brown;
+          border: none;
+          outline: 0;
+          overflow:hidden;
+          background: #f2f2f2;
+          z-index: 1;
+          cursor: pointer;
+          transition:         0.3s ease-in;
+          -o-transition:      0.3s ease-in;
+          -ms-transition:     0.3s ease-in;
+          -moz-transition:    0.3s ease-in;
+          -webkit-transition: 0.3s ease-in;
+          font-size: 1em;
+          font-weight: 700;
+        }
+        .fill:hover {
+          color: white;
+        }
+        .fill:before {
+          content: "";
+          position: absolute;
+          background: $red;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          top: 100%;
+          z-index: -1;
+          -webkit-transition: top 0.1s ease-in;
+        }
+        .fill:hover:before {
+          top: 0;
+        }
+      }
+      .service-spp.in-view {
+        opacity: 1;
+        -moz-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translate3d(0px, 0px, 0px);
+        -o-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate3d(0px, 0px, 0px);
+    }
+//------------------------------service die cutting, screen printing and more--//
+      .service-cpm {
+        background-color: $brown;
+        grid-column: 3 / span 2;
+        grid-row: 5 / span 3;
+        height: 300px;
+        z-index: 1;
+        padding: 10em 4em 8em 4em;
+        opacity: 0;
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
+        -moz-transform: translate3d(0px, 200px, 0px);
+        -webkit-transform: translate3d(0px, 200px, 0px);
+        -o-transform: translate(0px, 200px);
+        -ms-transform: translate(0px, 200px);
+        transform: translate3d(0px, 200px, 0px);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        h3:first-child {
+          color: $red;
+          font-size: 2em;
+          text-transform: uppercase;
+        } 
+        p {
+            color: white;
+            font-size: 20px;
+        }
+        button {
+          font-size: 1em;
+          position: relative;
+          padding: 0.75em 1.5em;
+          float: right;
+          margin: 3em 0;
+          color: $brown;
+          border: none;
+          outline: 0;
+          overflow:hidden;
+          background: #f2f2f2;
+          z-index: 1;
+          cursor: pointer;
+          transition:         0.3s ease-in;
+          -o-transition:      0.3s ease-in;
+          -ms-transition:     0.3s ease-in;
+          -moz-transition:    0.3s ease-in;
+          -webkit-transition: 0.3s ease-in;
+          font-size: 1em;
+          font-weight: 700;
+        }
+        .fill:hover {
+          color: white;
+        }
+        .fill:before {
+          content: "";
+          position: absolute;
+          background: $red;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          top: 100%;
+          z-index: -1;
+          -webkit-transition: top 0.1s ease-in;
+        }
+        .fill:hover:before {
+          top: 0;
+        }
+      }
+      .service-cpm.in-view {
+        opacity: 1;
+        -moz-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translate3d(0px, 0px, 0px);
+        -o-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate3d(0px, 0px, 0px);
+    }
+//--------------------------------------------service stamping and embossing--//
+      .service-se {
+        background-color: $brown;
+        grid-column: 5 / span 2;
+        grid-row: 4 / span 3;
+        height: 300px;
+        z-index: 1;
+        padding: 10em 4em 8em 4em;
+        opacity: 0;
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
+        -moz-transform: translate3d(0px, 200px, 0px);
+        -webkit-transform: translate3d(0px, 200px, 0px);
+        -o-transform: translate(0px, 200px);
+        -ms-transform: translate(0px, 200px);
+        transform: translate3d(0px, 200px, 0px);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        h3:first-child {
+          color: $red;
+          font-size: 2em;
+          text-transform: uppercase;
+        } 
+        p {
+            color: white;
+            font-size: 20px;
+        }
+        button {
+          font-size: 1em;
+          position: relative;
+          padding: 0.75em 1.5em;
+          float: right;
+          margin: 3em 0;
+          color: $brown;
+          border: none;
+          outline: 0;
+          overflow:hidden;
+          background: #f2f2f2;
+          z-index: 1;
+          cursor: pointer;
+          transition:         0.3s ease-in;
+          -o-transition:      0.3s ease-in;
+          -ms-transition:     0.3s ease-in;
+          -moz-transition:    0.3s ease-in;
+          -webkit-transition: 0.3s ease-in;
+          font-size: 1em;
+          font-weight: 700;
+        }
+        .fill:hover {
+          color: white;
+        }
+        .fill:before {
+          content: "";
+          position: absolute;
+          background: $red;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          top: 100%;
+          z-index: -1;
+          -webkit-transition: top 0.1s ease-in;
+        }
+        .fill:hover:before {
+          top: 0;
+        }
+      }
+      .service-se.in-view {
+        opacity: 1;
+        -moz-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translate3d(0px, 0px, 0px);
+        -o-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+//-------------------------------------------------------------about section--//
+.about-grid {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr;
+  grid-template-rows: 150px 150px 100px auto auto;
+  .about-heading {
+    grid-column: 1 / span 5;
+    grid-row: 2 / span 1;
+    height: 150px;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      h3:first-child {
+        color: $brown;
+        font-size: 3em;
+        margin: 0em 2em;
+      }
+      h3:nth-child(2) {
+        color: $red;
+        font-size: 2em;
+        margin: 0em 8.8em;
+      }
+  }
+  .about-heading.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+  .box-left {
+    grid-column: 1 / span 4;
+    grid-row: 5 / span 3;
+    z-index: 1;
+    background-color: $brown;
+    height: auto;
+    padding: 5em 8em 0 8em;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 200px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      color: $red;
+      font-size: 2em;
+      padding-bottom: 1em;
+      text-transform: uppercase;
+    }
+    p {
+      color: white;
+      font-size: 1em;
+    }
+    button {
+      font-size: 1em;
+      position: relative;
+      padding: 0.75em 1.5em;
+      float: right;
+      margin: 3em 1em;
+      color: white;
+      border: solid 2px $red;
+      outline: 0;
+      overflow:hidden;
+      background: $brown;
+      z-index: 1;
+      cursor: pointer;
+      transition:         0.3s ease-in;
+      -o-transition:      0.3s ease-in;
+      -ms-transition:     0.3s ease-in;
+      -moz-transition:    0.3s ease-in;
+      -webkit-transition: 0.3s ease-in;
+      font-size: 1em;
+      font-weight: 700;
+    }
+    .fill:hover {
+      color: white;
+    }
+    .fill:before {
+      content: "";
+      position: absolute;
+      background: $red;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 100%;
+      z-index: -1;
+      -webkit-transition: top 0.1s ease-in;
+    }
+    .fill:hover:before {
+      top: 0;
+    }
+  }
+  .box-left.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+  .box-right {
+    grid-column: 5 / span 2;
+    grid-row: 5 / span 3;
+    z-index: 1;
+    background-color: $red;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -o-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate3d(1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .box-right.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);    
+  }
+}
+//-------------------------------------------------------testimonial section--//
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 3fr 4fr 4fr 4fr 3fr;
+  grid-template-rows: 200px auto auto 50px 200px;
+//-------------------------------------------------------testimonial heading--//
+  .testimonial-heading {
+    grid-column: 1 / span 5;
+    grid-row: 2 / span 1;
+    z-index: 1;
+    height: 200px;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      h3:first-child {
+        color: $brown;
+        font-size: 3em;
+        margin: 0em 0em 0em 2em;
+      }
+      h3:nth-child(2) {
+        color: $red;
+        font-size: 2em;
+        margin: 0em 8.6em;
+      }
+  }
+  .testimonial-heading.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);     
+  }
+//-------------------------------------------kapture photography testimonial--//
+  .testimonial-1 {
+    grid-column: 2 / span 3;
+    grid-row: 3 / span 2;
+    z-index: 1;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    .testimonial-quote {
+        blockquote {
+            background: none;
+            color: gray;
+            font-family: Georgia, serif;
+            font-size: 1.5em;
+            font-style: italic;
+            line-height: 1.4 !important;
+            margin: 0;
+            position: relative;
+            text-shadow: 0 1px white;
+            z-index: 1;
+        }
+        blockquote * {
+            box-sizing: border-box;
+        }
+        blockquote p {
+            color: #75808a; 
+            line-height: 1.4 !important;
+        }
+        blockquote p:first-child:before {
+            content: '\201C';
+            color: #81bedb;
+            font-size: 7.5em;
+            font-weight: 700;
+            opacity: .3;
+            position: absolute;
+            top: -.4em;
+            left: -.2em;    
+            text-shadow: none;
+            z-index: -300;
+        }
+        cite {
+            color: gray;
+            display: block;
+            font-size: .8em; 
+        }
+        cite span {
+            color: #5e5e5e;
+            font-size: 1em;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 0 1px white; 
+        }
+        hr {
+            margin: 60px auto; 
+            opacity: .5;
+        }
+    }
+  }
+  .testimonial-1.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);    
+  }
+//---------------------------------------------------scott print testimonial--//
+.testimonial-2 {
+    grid-column: 2 / span 3;
+    grid-row: 5 / span 2;
+    z-index: 1;
+    position: relative;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    .testimonial-quote {
+        blockquote {
+            background: none;
+            color: gray;
+            font-family: Georgia, serif;
+            font-size: 1.5em;
+            font-style: italic;
+            line-height: 1.4 !important;
+            margin: 0;
+            position: relative;
+            text-shadow: 0 1px white;
+            z-index: 1;
+        }
+        blockquote * {
+            box-sizing: border-box;
+        }
+        blockquote p {
+            color: #75808a; 
+            line-height: 1.4 !important;
+        }
+        blockquote p:first-child:before {
+            content: '\201C';
+            color: #81bedb;
+            font-size: 7.5em;
+            font-weight: 700;
+            opacity: .3;
+            position: absolute;
+            top: -.4em;
+            left: -.2em;    
+            text-shadow: none;
+            z-index: -300;
+        }
+        cite {
+            color: gray;
+            display: block;
+            font-size: .8em;
+            text-align: right;
+        }
+        cite span {
+            color: #5e5e5e;
+            font-size: 1em;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 0 1px white; 
+        }
+        hr {
+            margin: 60px auto; 
+            opacity: .5;
+        }
+    }
+  }
+.testimonial-2.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);    
+  }
+//-------------------------------------------kapture photography testimonial--//
+  .testimonial-3 {
+    grid-column: 2 / span 3;
+    grid-row: 7 / span 2;
+    z-index: 1;
+    position: relative;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    .testimonial-quote {
+        blockquote {
+            background: none;
+            color: gray;
+            font-family: Georgia, serif;
+            font-size: 1.5em;
+            font-style: italic;
+            line-height: 1.4 !important;
+            margin: 0;
+            position: relative;
+            text-shadow: 0 1px white;
+            z-index: 1;
+        }
+        blockquote * {
+            box-sizing: border-box;
+        }
+        blockquote p {
+            color: #75808a; 
+            line-height: 1.4 !important;
+        }
+        blockquote p:first-child:before {
+            content: '\201C';
+            color: #81bedb;
+            font-size: 7.5em;
+            font-weight: 700;
+            opacity: .3;
+            position: absolute;
+            top: -.4em;
+            left: -.2em;    
+            text-shadow: none;
+            z-index: -300;
+        }
+        cite {
+            color: gray;
+            display: block;
+            font-size: .8em; 
+        }
+        cite span {
+            color: #5e5e5e;
+            font-size: 1em;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 0 1px white; 
+        }
+        hr {
+            margin: 60px auto; 
+            opacity: .5;
+        }
+    }
+  }
+.testimonial-3.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);    
+  }
+}
+//----------------------------------------------------------product showcase--//
+.product-grid {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  grid-template-rows: 200px auto auto auto auto;
+//-----------------------------------------------------------folder products--//
+  .folders {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 3;
+    z-index: 1;
+    height: 100vh;
+    background-color: $d-grey;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 50vh, 0px);
+    -webkit-transform: translate3d(0px, 50vh, 0px);
+    -o-transform: translate(0px, 50vh);
+    -ms-transform: translate(0px, 50vh);
+    transform: translate3d(0px, 50vh, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      color: white;
+      font-size: 3em;
+      text-transform: uppercase;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      padding-left: 1em;
+    }
+    h3:first-child {
+      padding-top: 2em;
+    }
+    .product-portrait {
+      background-color: white;
+      margin: 0 auto;
+      transition: all 0.3s ease-in;
+      width: 110%;
+      height: 110%;
+      transform-origin: 45% 20%;
+      transform: scale(0.33,0.2);
+      border-radius: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: all 0.3s ease-in;
+      }
+    }
+    .product-portrait:hover {
+      transform: scale(1);
+      transform: translate(0, -23%);
+      border-radius: 0;
+      transition: transform 0.4s, border-radius 0.4s;
+      img {
+        border-radius: 0;
+        transition: transform 0.4s, border-radius 0.4s;
+      }
+    }
+  }
+  .folders.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px); 
+  }
+//--------------------------------------------------------slip case products--//
+  .slip-cases {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    z-index: 1;
+    background-color: $brown;
+    height: 50vh;
+    overflow: hidden;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 200px, 0px);
+    -o-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate3d(1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      color: white;
+      font-size: 3em;
+      text-transform: uppercase;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      padding-left: 1em;
+    }
+    h3:first-child {
+      padding-top: 2em;
+    }
+    .product-portrait {
+      background-color: white;
+      margin: 0 auto;
+      transition: all 0.3s ease-in;
+      width: 110%;
+      height: 110%;
+      transform-origin: 79% -5%;
+      transform: scale(0.3,0.35);
+      border-radius: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: all 0.3s ease-in;
+      }
+    }
+    .product-portrait:hover {
+      transform: scale(1);
+      transform: translate(0, -56%);
+      border-radius: 0;
+      transition: transform 0.4s, border-radius 0.4s;
+      img {
+        border-radius: 0;
+        transition: transform 0.4s, border-radius 0.4s;
+      }
+    }
+  }
+  .slip-cases.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+//----------------------------------------------------------divider products--//
+  .dividers {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    z-index: 1;
+    background-color: $red;
+    height: 50vh;
+    overflow: hidden;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 50vh, 0px);
+    -webkit-transform: translate3d(0px, 50vh, 0px);
+    -o-transform: translate(0px, 50vh);
+    -ms-transform: translate(0px, 50vh);
+    transform: translate3d(0px, 50vh, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      color: white;
+      font-size: 3em;
+      text-transform: uppercase;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      padding-left: 1em;
+    }
+    h3:first-child {
+      padding-top: 2em;
+    }
+    .product-portrait {
+      background-color: white;
+      margin: 0 auto;
+      transition: all 0.3s ease-in;
+      width: 110%;
+      height: 110%;
+      transform-origin: 79% -5%;
+      transform: scale(0.3,0.35);
+      border-radius: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: all 0.3s ease-in;
+      }
+    }
+    .product-portrait:hover {
+      transform: scale(1);
+      transform: translate(0, -56%);
+      border-radius: 0;
+      transition: transform 0.4s, border-radius 0.4s;
+      img {
+        border-radius: 0;
+        transition: transform 0.4s, border-radius 0.4s;
+      }
+    }
+  }
+  .dividers.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+//-------------------------------------------------------------case products--//
+  .cases {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+    z-index: 1;
+    background-color: $blue;
+    height: 50vh;
+    overflow: hidden;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 200px, 0px);
+    -o-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate3d(1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      color: white;
+      font-size: 3em;
+      text-transform: uppercase;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      padding-left: 1em;
+    }
+    h3:first-child {
+      padding-top: 2em;
+    }
+    .product-portrait {
+      background-color: white;
+      margin: 0 auto;
+      transition: all 0.3s ease-in;
+      width: 110%;
+      height: 110%;
+      transform-origin: 86% 0%;
+      transform: scale(0.15,0.35);
+      border-radius: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: all 0.3s ease-in;
+      }
+    }
+    .product-portrait:hover {
+      transform: scale(1);
+      transform: translate(0, -50%);
+      border-radius: 0;
+      transition: transform 0.4s, border-radius 0.4s;
+      img {
+        border-radius: 0;
+        transition: transform 0.4s, border-radius 0.4s;
+      }
+    }
+  }
+  .cases.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+//------------------------------------------------------ring binder products--//
+  .ring-binders {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+    z-index: 1;
+    background-color: $red;
+    height: 50vh;
+    overflow: hidden;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 200px, 0px);
+    -o-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate3d(1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      color: white;
+      font-size: 3em;
+      text-transform: uppercase;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      padding-left: 1em;
+    }
+    h3:first-child {
+      padding-top: 2em;
+    }
+    .product-portrait {
+      background-color: white;
+      margin: 0 auto;
+      transition: all 0.3s ease-in;
+      width: 110%;
+      height: 110%;
+      transform-origin: 86% 0%;
+      transform: scale(0.15,0.35);
+      border-radius: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: all 0.3s ease-in;
+      }
+    }
+    .product-portrait:hover {
+      transform: scale(1);
+      transform: translate(0, -50%);
+      border-radius: 0;
+      transition: transform 0.4s, border-radius 0.4s;
+      img {
+        border-radius: 0;
+        transition: transform 0.4s, border-radius 0.4s;
+      }
+    }
+  }
+  .ring-binders.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+//----------------------------------------------------------wallets-products--//
+  .wallets {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+    z-index: 1;
+    background-color: $brown;
+    height: 50vh;
+    overflow: hidden;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 50vh, 0px);
+    -webkit-transform: translate3d(0px, 50vh, 0px);
+    -o-transform: translate(0px, 50vh);
+    -ms-transform: translate(0px, 50vh);
+    transform: translate3d(0px, 50vh, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      color: white;
+      font-size: 3em;
+      text-transform: uppercase;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      padding-left: 1em;
+    }
+    h3:first-child {
+      padding-top: 2em;
+    }
+    .product-portrait {
+      background-color: white;
+      margin: 0 auto;
+      transition: all 0.3s ease-in;
+      width: 110%;
+      height: 110%;
+      transform-origin: 79% -4%;
+      transform: scale(0.3,0.35);
+      border-radius: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: all 0.3s ease-in;
+      }
+    }
+    .product-portrait:hover {
+      transform: scale(1);
+      transform: translate(0, -56%);
+      border-radius: 0;
+      transition: transform 0.4s, border-radius 0.4s;
+      img {
+        border-radius: 0;
+        transition: transform 0.4s, border-radius 0.4s;
+      }
+    }
+  }
+  .wallets.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+}
+//-----------------------------------------------------------contact section--//
+.contact-grid {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  grid-template-rows: 200px auto auto 200px 200px;
+    .contact {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 2;
+    z-index: 1;
+    text-align: center;
+    opacity: 0;
+    -moz-transition: all 1200ms ease-out;
+    -webkit-transition: all 1200ms ease-out;
+    -o-transition: all 1200ms ease-out;
+    transition: all 1200ms ease-out;
+    h3 {
+      color: $brown;
+      font-weight: 700;
+      font-size: 3em;
+      text-align: center;
+      padding: 2em 3em 1em 3em;
+      margin-top: 3em;
+    }
+    button {
+      position: relative;
+      padding: 0.75em 1.5em;
+      margin: 0;
+      color: $brown;
+      border: 3px solid $red;
+      outline: 0;
+      overflow:hidden;
+      background: #f2f2f2;
+      z-index: 1;
+      cursor: pointer;
+      transition:         0.3s ease-in;
+      -o-transition:      0.3s ease-in;
+      -ms-transition:     0.3s ease-in;
+      -moz-transition:    0.3s ease-in;
+      -webkit-transition: 0.3s ease-in;
+      font-size: 1em;
+      font-weight: 700;
+    }
+    .fill:hover {
+      color: white;
+    }
+    .fill:before {
+      content: "";
+      position: absolute;
+      background: $red;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 100%;
+      z-index: -1;
+      -webkit-transition: top 0.1s ease-in;
+    }
+    .fill:hover:before {
+      top: 0;
+    }
+  }
+  .contact.in-view {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+//---------------------------------------------------------home page tablett--//
+//--------------------------------------------------home banner optimisation--//
+  .home-grid {
+    grid-template-rows: 100px auto auto auto 150px;
+    .background {
+      height: 75vh;
+    }
+    .title {
+      h3 {
+        font-size: 3em;
+      }
+      h3:first-child {
+        margin-top: 100px;
+      }
+    }
+    .box-upper {
+      grid-column: 4 / span 3;
+    }
+    .box-lower {
+      grid-column: 4 / span 3;
+    }
+  }
+//---------------------------------------------------what we do optimisation--//
+  .wwd-grid {
+    grid-template-rows: auto auto auto auto auto;
+    .wwd-heading {
+      h3:first-child {
+        font-size: 2em;
+      }
+      h3:nth-child(2){
+        margin: 0em 0em 0em 7em; 
+        font-size: 1.5em;
+      }
+    }
+    .service-spp {
+      grid-column: 1 / span 3;
+      grid-row: 3 / span 1;
+      height: auto;
+      padding: 1em;
+      h3:first-child {
+        font-size: 1.5em;
+      }
+      p {
+         font-size: 14px;
+       }
+       .fill {
+         font-size: 14px;
+         margin: 2em 0.5em 1em 0em;
+       }
+    }
+    .service-cpm {
+      grid-column: 4 / span 3;
+      grid-row: 4 / span 1;
+      height: auto;
+      padding: 1em;
+      h3:first-child {
+        font-size: 1.5em;
+      }
+      p {
+         font-size: 14px;
+       }
+       .fill {
+         font-size: 14px;
+         margin: 2em 0.5em 1em 0em;
+       }
+    }
+    .service-se {
+      grid-column: 1 / span 3;
+      grid-row: 5 / span 1;
+      height: auto;
+      padding: 1em;
+      h3:first-child {
+        font-size: 1.5em;
+      }
+      p {
+         font-size: 14px;
+       }
+       .fill {
+         font-size: 14px;
+         margin: 2em 0.5em 1em 0em;
+       }
+    }
+  }
+//-----------------------------------------------------about us optimisation--//
+  .about-grid {
+    grid-template-rows: 150px auto auto auto auto;
+    .about-heading {
+      h3:first-child {
+        font-size: 2em;
+      }
+      h3:nth-child(2) {
+        font-size: 1.5em;
+        margin: 0em 0em 0em 8em;
+      }
+    }
+    .box-left {
+      padding: 1em 2em 0 2em;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  .testimonial-grid {
+    .testimonial-heading {
+      h3:first-child {
+        font-size: 2em;
+      }
+      h3:nth-child(2) {
+        font-size: 1.5em;
+        margin: 0em 6.5em;
+      }
+    }
+    .testimonial-1,.testimonial-2,.testimonial-3 {
+      .testimonial-quote {
+        blockquote {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+//------------------------------------------------------product optimisation--//
+  .product-grid {
+    .folders,.slip-cases,.dividers,.cases,.ring-binders,.wallets {
+      .product-title {
+        h3 {
+          font-size: 1.5em;
+        }
+      }
+    }
+    .folders {
+      height: 50vh;
+    }
+    .slip-cases,.dividers,.cases,.ring-binders,.wallets {
+      height: 25vh;
+    }
+  }
+//------------------------------------------------------contact optimisation--//
+  .contact-grid {
+    grid-template-rows: 100px auto auto 100px 200px;
+    .contact {
+      h3 {
+        font-size: 2em;
+      }
+    }
+  }
+}

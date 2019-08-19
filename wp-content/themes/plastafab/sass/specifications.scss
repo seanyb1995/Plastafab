@@ -1,0 +1,467 @@
+//------------------------------------------------------------specifications--//
+//-------------------------------------------------------------about section--//
+.specifications-grid {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr;
+  grid-template-rows: 150px auto auto 50px 150px;
+  .specifications-heading {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    height: 150px;
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      h3:first-child {
+        color: $brown;
+        font-size: 3em;
+        margin: 0em 2em;
+      }
+      h3:nth-child(2) {
+        color: $red;
+        font-size: 2em;
+        margin: 0em 8.8em;
+      }
+  }
+  .specifications-heading.in-view {
+    opacity: 1;
+  }
+//--------------------------------------------------------banner information--//
+  .box-left {
+    grid-column: 1 / span 4;
+    grid-row: 4 / span 3;
+    z-index: 1;
+    background-color: $brown;
+    height: 550px;
+    padding: 5em 8em 0 8em;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 0px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      font-size: 2em;
+      padding-bottom: 1em;
+      padding-right: 0.25em;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+    h3:first-child {
+        color: white;
+    }
+    h3:nth-child(2) {
+        color: $red;
+    }
+    p {
+      color: white;
+      font-style: italic;
+      padding-right: 16em;
+    }
+    button {
+      font-size: 1em;
+      position: relative;
+      padding: 0.75em 1.5em;
+      float: right;
+      margin: 3em 1em;
+      color: white;
+      border: solid 2px $red;
+      outline: 0;
+      overflow:hidden;
+      background: $brown;
+      z-index: 1;
+      cursor: pointer;
+      transition:         0.3s ease-in;
+      -o-transition:      0.3s ease-in;
+      -ms-transition:     0.3s ease-in;
+      -moz-transition:    0.3s ease-in;
+      -webkit-transition: 0.3s ease-in;
+      font-size: 1em;
+      font-weight: 700;
+    }
+    .fill:hover {
+      color: white;
+    }
+    .fill:before {
+      content: "";
+      position: absolute;
+      background: $red;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 100%;
+      z-index: -1;
+      -webkit-transition: top 0.1s ease-in;
+    }
+    .fill:hover:before {
+      top: 0;
+    }
+  }
+  .box-left.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+  .box-right {
+    grid-column: 4 / span 3;
+    grid-row: 6 / span 3;
+    height: 600px;
+    z-index: 2;
+    background-color: $red;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -o-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate3d(1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .box-right.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px); 
+  }
+//-------------------------------------------------------artwork information--//
+  .artwork-information {
+    grid-column: 1 / span 3;
+    grid-row: 9 / span 1;
+    z-index: 1;
+    background: $brown;
+    padding: 5em;
+    h3,p {
+        color: white;
+        opacity: 0;
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
+        -moz-transform: translate3d(0px, 200px, 0px);
+        -webkit-transform: translate3d(0px, 200px, 0px);
+        -o-transform: translate(0px, 200px);
+        -ms-transform: translate(0px, 200px);
+        transform: translate3d(0px, 200px, 0px);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    h3 {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+    h3:first-child {
+        padding-right: 0.25em
+    }
+    h3:nth-child(2) {
+        color: $red;
+    }
+    h3:first-child,h3:nth-child(2) {
+        display: inline-block;
+        font-size: 2em;
+    }
+    p {
+        padding-bottom: 2em;
+    }
+  }
+  .artwork-information.in-view h3 {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+  .artwork-information.in-view p {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+//-------------------------------------------------specificaiton infomration--//
+  .specification-information {
+    grid-column: 4 / span 3;
+    grid-row: 9 / span 1;
+    z-index: 1;
+    background: $brown;
+    padding: 5em;
+    h3,p {
+        color: white;
+        opacity: 0;
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
+        -moz-transform: translate3d(0px, 200px, 0px);
+        -webkit-transform: translate3d(0px, 200px, 0px);
+        -o-transform: translate(0px, 200px);
+        -ms-transform: translate(0px, 200px);
+        transform: translate3d(0px, 200px, 0px);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    h3 {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+    h3:first-child {
+        padding-right: 0.25em
+    }
+    h3:nth-child(2) {
+        color: $red;
+    }
+    h3:first-child,h3:nth-child(2) {
+        display: inline-block;
+        font-size: 2em;
+    }
+    p {
+      padding: 1em 1em 1em 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      opacity: 0;
+      -moz-transition: all 700ms ease-out;
+      -webkit-transition: all 700ms ease-out;
+      -o-transition: all 700ms ease-out;
+      transition: all 700ms ease-out;
+      -moz-transform: translate3d(0px, 200px, 0px);
+      -webkit-transform: translate3d(0px, 200px, 0px);
+      -o-transform: translate(0px, 200px);
+      -ms-transform: translate(0px, 200px);
+      transform: translate3d(0px, 200px, 0px);
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      thead {
+        color: white;
+        background: $red;
+        tr {
+          th {
+            padding: 16px;
+          }
+        }
+      }
+      tbody {
+        td, th  {
+          border: none;
+          padding: 8px;
+        }
+        tr:first-child {
+          font-weight: bold;
+        }
+        tr:nth-child(even) {
+          background: white;
+        }
+        tr:nth-child(odd) {
+          background: $l-grey;
+        }
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+      }
+    }
+  }
+  .specification-information.in-view h3 {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);     
+  }
+  .specification-information.in-view p {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);     
+  }
+  .specification-information.in-view table {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);     
+  }
+//---------------------------------------------------------sales information--//
+ .sales-information-heading {
+    grid-column: 1 / span 6;
+    grid-row: 10 / span 1;
+    z-index: 1;
+    background: $l-grey;
+    padding: 5em 5em 0 5em;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    h3 {
+        font-size: 2em;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+    h3:first-child {
+        color: $brown;
+        padding-right: 0.25em;
+    }
+    h3:nth-child(2) {
+        color: $red;
+    }
+  }
+  .sales-information-heading.in-view {
+    opacity: 1;
+  }
+  .sales-information-left {
+    grid-column: 1 / span 3;
+    grid-row: 11 / span 1;
+    z-index: 1;
+    background: $l-grey;
+    padding: 0 5em 5em 5em;
+    h3,p {
+        color: $brown;
+        opacity: 0;
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
+        -moz-transform: translate3d(0px, 200px, 0px);
+        -webkit-transform: translate3d(0px, 200px, 0px);
+        -o-transform: translate(0px, 200px);
+        -ms-transform: translate(0px, 200px);
+        transform: translate3d(0px, 200px, 0px);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    h3 {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+    p {
+        padding-bottom: 2em;
+    }
+  }
+  .sales-information-left.in-view h3 {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+  .sales-information-left.in-view p {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+  .sales-information-right {
+    grid-column: 4 / span 3;
+    grid-row: 11 / span 1;
+    z-index: 1;
+    background: $l-grey;
+    padding: 0 5em 5em 5em;
+    h3,p {
+        color: $brown;
+        opacity: 0;
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
+        -moz-transform: translate3d(0px, 200px, 0px);
+        -webkit-transform: translate3d(0px, 200px, 0px);
+        -o-transform: translate(0px, 200px);
+        -ms-transform: translate(0px, 200px);
+        transform: translate3d(0px, 200px, 0px);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    h3 {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+    p {
+        padding-bottom: 2em;
+    }
+  }
+  .sales-information-right.in-view h3 {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);   
+  }
+  .sales-information-right.in-view p {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);    
+  }
+}
+//-------------------------------------------specificaiton page optimisation--//
+@media (min-width: 720px) and (max-width: 1024px) {
+  .specifications-grid {
+    .box-left {
+      padding: 0em 1em 0 2em;
+      height: auto;
+      h3 {
+        padding-bottom: 0;
+        padding-top: 1em;
+      }
+      p {
+        padding-right: 8em;
+        padding-bottom: 2em;
+      }
+    }
+    .artwork-information {
+      padding: 1em;
+    }
+    .specification-information {
+      padding: 1em;
+    }
+    .sales-information-left {
+      padding: 0 1em 1em 1em;
+    }
+    .sales-information-right {
+      padding: 0 1em 1em 1em;
+    }
+  }
+}

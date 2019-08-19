@@ -1,0 +1,221 @@
+//---------------------------------------------------------------------vinyl--//
+.vinyl-grid {
+  display: grid;
+  grid-template-columns: 2fr 4fr 4fr 2fr 2fr 4fr 4fr 2fr;
+  grid-template-rows: 100px auto 100px auto auto;
+  .vinyl {
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 2;
+    height: auto;
+    background-color: $l-grey;
+    z-index: 1;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .vinyl.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);      
+  }
+  .vinyl-text {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    z-index: 1;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+        margin: 0;
+        padding: 0;
+    }
+    h3:first-child {
+      font-size: 2em;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $red;
+    }
+    h3:nth-child(2) {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: grey;
+    }
+    p {
+      color: grey;
+    }
+    button {
+      font-size: 1em;
+      position: relative;
+      padding: 0.75em 1.5em;
+      float: right;
+      margin: 3em 0em;
+      color: $brown;
+      border: 2px solid $red;
+      outline: 0;
+      overflow:hidden;
+      background: #f2f2f2;
+      z-index: 1;
+      cursor: pointer;
+      transition:         0.3s ease-in;
+      -o-transition:      0.3s ease-in;
+      -ms-transition:     0.3s ease-in;
+      -moz-transition:    0.3s ease-in;
+      -webkit-transition: 0.3s ease-in;
+      font-size: 1em;
+      font-family: helvetica;
+      font-weight: bold;
+    }
+    .fill:hover {
+      color: white;
+    }
+    .fill:before {
+      content: "";
+      position: absolute;
+      background: $red;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 100%;
+      z-index: -1;
+      -webkit-transition: top 0.1s ease-in;
+    }
+    .fill:hover:before {
+      top: 0;
+    }
+  }
+  .vinyl-text.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);      
+  }
+  .vinyl-image {
+    grid-column: 5 / span 4;
+    grid-row: 1 / span 2;
+    height: auto;
+    background-color: $l-grey;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    img {
+        height: 150%;
+        width: 110%;
+    }
+  }
+  .vinyl-image.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);     
+  }
+}
+//--------------------------------------------------------------product list--//
+.vinyl-list-grid {
+  display: grid;
+  grid-template-columns: 2fr 4fr 4fr 4fr 4fr 4fr 4fr 2fr;
+  grid-template-rows: 150px auto 100px auto auto;
+  .vinyl-heading {
+    grid-column: 2 / span 6;
+    grid-row: 2 / span 1;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+    }
+    h3:first-child {
+      color: $brown;
+      font-size: 3em;
+    }
+    h3:nth-child(2) {
+      color: $red;
+      font-size: 2em;
+      padding-left: 3.3em;
+    }
+  }
+  .vinyl-heading.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px); 
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+  .vinyl-grid {
+    grid-template-rows: auto auto 100px auto auto;
+    .vinyl-text {
+      h3:first-child {
+        padding-top: 1em;
+      }
+      button {
+        margin: 1em 0;
+      }
+    }
+  }
+  .vinyl-list-grid {
+    grid-template-rows: auto auto 100px auto auto;
+    .vinyl-heading {
+      h3:nth-child(2) {
+        padding-left: 0; 
+      }
+    }
+  }
+}
+
+
+

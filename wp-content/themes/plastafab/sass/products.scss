@@ -1,0 +1,509 @@
+//------------------------------------------------------------------products--//
+.products-grid {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr;
+  grid-template-rows: auto auto auto auto auto;
+//-----------------------------------------------------------products banner--//
+  .cover {
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 3;
+    z-index: 2;
+    color: white;
+  }
+  .left-box {
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 3;
+    z-index: 1;
+    width: 50%;
+    height: 100vh;
+    background-color: $red;
+    transition: all 0.5s;
+    overflow: hidden;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 0px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .left-box.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);    
+  }
+  .right-box {
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 3;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    .text {
+        opacity: 0;
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
+        -moz-transform: translate3d(0px, 200px, 0px);
+        -webkit-transform: translate3d(0px, 200px, 0px);
+        -o-transform: translate(0px, 200px);
+        -ms-transform: translate(0px, 200px);
+        transform: translate3d(0px, 200px, 0px);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        h3 {
+          font-size: 2em;
+          font-weight: bold;
+          transition: color 0.3s ease;
+          text-transform: uppercase;
+          padding-left: 1.5em;
+        }
+        p {
+          color: grey;
+          font-size: 1em;
+          transition: color 0.3s ease;
+          font-style: italic;
+          padding-left: 3em;
+          padding-right: 3em;
+        }
+        button {
+          position: relative;
+          padding: 0.5em 1em;
+          margin-top: 2em;
+          margin-left: 3em;
+          float: left;
+          color: white;
+          border: solid 2px red;
+          outline: 0;
+          overflow: hidden;
+          background: red;
+          z-index: 1;
+          cursor: pointer;
+          transition: color 0.3s ease;
+          transition:         0.3s ease-in;
+          -o-transition:      0.3s ease-in;
+          -ms-transition:     0.3s ease-in;
+          -moz-transition:    0.3s ease-in;
+          -webkit-transition: 0.3s ease-in;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+    }
+    .text.in-view {
+         opacity: 1;
+        -moz-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translate3d(0px, 0px, 0px);
+        -o-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate3d(0px, 0px, 0px); 
+    }
+  }
+//------------------------------------------------------------vinyl products--//
+  .vinyl-text {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+    z-index: 1;
+    margin: 10px 0;
+    background: #f2f2f2;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 0px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      font-size: 2em;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 2em 0 0 3em;
+    }
+    p {
+      padding: 0 6em 0 6em;
+      color: grey;
+    }
+    button {
+      position: relative;
+      padding: 0.5em 1em;
+      float: right;
+      margin: 2em 7em;
+      color: $red;
+      border: none;
+      outline: 0;
+      overflow: hidden;
+      background: none;
+      z-index: 1;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      transition:         0.3s ease-in;
+      -o-transition:      0.3s ease-in;
+      -ms-transition:     0.3s ease-in;
+      -moz-transition:    0.3s ease-in;
+      -webkit-transition: 0.3s ease-in;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .fill:hover {
+      text-decoration: underline;
+    }
+  }
+  .vinyl-text.in-view {
+     opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);   
+  }
+  .vinyl-image {
+    position: relative;
+    grid-column: 3 / span 4;
+    grid-row: 4 / span 1;
+    height: 410px;
+    z-index: 1; 
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px 0;
+    background: #f2f2f2;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -o-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate3d(1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    img {
+      height: 140%;
+      width: 100%;
+      margin-left: 4px;
+    }
+  }
+  .vinyl-image:after {
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 0;
+    bottom: 0;
+    background: $red;
+    z-index: 1;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+  }
+  .vinyl-image:hover:after {
+    height: 100%;
+    top: 0;
+    bottom: auto;
+    transition:         0.6s ease-in;
+  }
+  .vinyl-image.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);   
+  }
+//----------------------------------------------------polypropylene products--//
+.polypropylene-text {
+    grid-column: 5 / span 2;
+    grid-row: 5 / span 1;
+    z-index: 1;
+    background: $brown;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -o-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate3d(1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      font-size: 2em;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 2em 0 0 3em;
+      color: white;
+      opacity: 0.3;
+    }
+    p {
+      padding: 0 6em 0 6em;
+      color: white;
+    }
+    button {
+      position: relative;
+      padding: 0.5em 1em;
+      float: right;
+      margin: 2em 7em;
+      color: $red;
+      border: none;
+      outline: 0;
+      overflow: hidden;
+      background: none;
+      z-index: 1;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      transition:         0.3s ease-in;
+      -o-transition:      0.3s ease-in;
+      -ms-transition:     0.3s ease-in;
+      -moz-transition:    0.3s ease-in;
+      -webkit-transition: 0.3s ease-in;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .fill:hover {
+      text-decoration: underline;
+    }
+  }
+  .polypropylene-text.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+  .polypropylene-image {
+    position: relative;
+    grid-column: 1 / span 4;
+    grid-row: 5 / span 1;
+    height: 430px;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    background: $brown;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 0px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    img {
+      height: 140%;
+      width: 100%;
+    }
+  }
+  .polypropylene-image:after {
+    content: "";
+    width: 4px;
+    position: absolute;
+    left: calc(100% - 4px);
+    height: 0;
+    bottom: 0;
+    background: $red;
+    z-index: 2;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+  }
+  .polypropylene-image:hover:after {
+    height: 100%;
+    top: 0;
+    bottom: auto;
+    transition: 0.6s ease-in;
+  }
+  .polypropylene-image.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);  
+  }
+//-------------------------------------------------bound & casemade products--//
+  .bound-casemade-text {
+    grid-column: 1 / span 2;
+    grid-row: 6 / span 1;
+    z-index: 1;
+    margin: 10px 0;
+    background: #f2f2f2;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 0px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    h3 {
+      font-size: 2em;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 2em 0 0 3em;
+    }
+    p {
+      padding: 0 6em 0 6em;
+      color: grey;
+    }
+    button {
+      position: relative;
+      padding: 0.5em 1em;
+      float: right;
+      margin: 2em 7em;
+      color: $red;
+      border: none;
+      outline: 0;
+      overflow: hidden;
+      background: none;
+      z-index: 1;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      transition:         0.3s ease-in;
+      -o-transition:      0.3s ease-in;
+      -ms-transition:     0.3s ease-in;
+      -moz-transition:    0.3s ease-in;
+      -webkit-transition: 0.3s ease-in;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .fill:hover {
+      text-decoration: underline;
+    }
+  }
+  .bound-casemade-text.in-view {
+     opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);   
+  }
+  .bound-casemade-image {
+    position: relative;
+    grid-column: 3 / span 4;
+    grid-row: 6 / span 1;
+    height: 410px;
+    z-index: 1; 
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px 0;
+    background: #f2f2f2;
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -o-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate3d(1000px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    img {
+      height: 140%;
+      width: 100%;
+      margin-left: 4px;
+    }
+  }
+  .bound-casemade-image:after {
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 0;
+    bottom: 0;
+    background: $red;
+    z-index: 1;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+  }
+  .bound-casemade-image:hover:after {
+    height: 100%;
+    top: 0;
+    bottom: auto;
+    transition:         0.6s ease-in;
+  }
+  .bound-casemade-image.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);   
+  }
+}
+//------------------------------------------------products page optimisation--//
+@media (min-width: 720px) and (max-width: 1024px) {
+  .products-grid {
+    .right-box {
+      .text {
+        padding: 1em;
+      }
+    }
+    .vinyl-text,.polypropylene-text,.bound-casemade-text {
+      h3 {
+        padding: 0;
+        padding-left: 1em;  
+      }
+      p {
+        padding: 2em;  
+      }
+    }
+    .vinyl-text {
+      grid-column: 1 /span 3;
+    }
+    .vinyl-image {
+      grid-column: 4 /span 3;
+    }
+    .polypropylene-text {
+      grid-column: 4 /span 3;
+    }
+    .polypropylene-image {
+      grid-column: 1 /span 3;
+    }
+    .bound-casemade-text {
+      grid-column: 1 /span 3;
+    }
+    .bound-casemade-image {
+      grid-column: 4 /span 3;
+    }
+    .vinyl-image,.polypropylene-image,.bound-casemade-image {
+      height: auto;
+    }
+  }
+}
